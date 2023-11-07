@@ -1,2 +1,3 @@
 # Polo_digital
-Proyecto portotipo API para Polo Digital
+
+Proyecto prototipo API para Polo Digital
