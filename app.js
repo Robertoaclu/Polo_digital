@@ -29,6 +29,9 @@ connection.connect(function (error) {
 // --------------------------------------------------------------------------
 // Aqui empieza la API
 
+
+// Carrusel
+
 app.get (`/carrusel`, function(request, response){
     connection.query("select * from eventos", function (error, result, fields) {
         if (error) {
@@ -46,14 +49,23 @@ app.get (`/carrusel`, function(request, response){
 });
 
 
+// Login
+
 app.get (`/login`, function(request, response){
-    connection.query("select * from usuarios", function (error, result, fields) {
+    const email = request.query.email;
+    const password = request.query.password;
+
+    connection.query(`select * from usuarios where email = "${request.query.email}" and password = "${request.query.password}"`, function (error, result, fields) {
         if (error) {
             return console.error(`error: ${error.message}`);
         }
         
-        
-        response.send(eventos);        
+        if (result.length == 0){
+            response.send({message: "Email o password no validos"});
+        }else {
+            response.send({message: "Ususario logueado"});
+        }
+                
     });
     
 });
