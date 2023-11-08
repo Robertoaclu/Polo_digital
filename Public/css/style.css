@@ -1,0 +1,31 @@
+body {
+  font-family: Inter;
+  font-size: 16px;
+  color: var(--negro);
+  background-color: var(--blanco);
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegacion ul {
+  padding: 0;
+}
+
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+nav ul li {
+  margin: 0px 16px;
+}
