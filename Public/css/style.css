@@ -7,17 +7,14 @@ body {
 
 .navegacion {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color:dimgray;
+  color: white;
 }
 
 .navegacion ul {
   padding: 0;
-}
-
-header .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav li {
@@ -26,6 +23,10 @@ nav li {
   margin-right: 16px;
 }
 
-nav ul li {
-  margin: 0px 16px;
+.pie {
+ display: flex;
+ justify-content: center;
+ background-color: dimgray;
+ color: white;
+ padding:8px;
 }
