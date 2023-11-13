@@ -228,10 +228,10 @@ app.post(`/clientes/:id`, function (request, response) {
 // Extra
 app.get(`/clientes/:id`, function (request, response) {
     connection.query(`SELECT * FROM clientes where id= ${request.params.id}`, function(error, result, fields){
-        if (error) {
-            return console.error(`error: ${error.message}`);
-        }
-        response.send(result);
+        handleSQLError(response, error, result, function(result){
+            response.send(result);
+        });
+        
     });
     console.log("Obtiene los datos del cliente con el id en :id");
 });
