@@ -1,8 +1,11 @@
 body {
   font-family: Inter;
   font-size: 16px;
-  color: var(--negro);
-  background-color: var(--blanco);
+}
+
+.cabecera{
+  display: flex;
+  justify-content: center;
 }
 
 .navegacion {
@@ -11,6 +14,7 @@ body {
   align-items: center;
   background-color:dimgray;
   color: white;
+  margin-bottom: 124px;
 }
 
 .navegacion ul {
@@ -23,10 +27,17 @@ nav li {
   margin-right: 16px;
 }
 
+.carrusel ul{
+  display: flex;
+  justify-content:space-evenly;
+  text-decoration: none;
+}
+
 .pie {
  display: flex;
  justify-content: center;
  background-color: dimgray;
  color: white;
  padding:8px;
+ margin-top: 124px;
 }
