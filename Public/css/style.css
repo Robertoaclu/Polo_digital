@@ -20,12 +20,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 124px;
-  border-style: solid;
+  margin-bottom: 116px;
 }
 
-.navegacion ul {
-  padding: 0;
+.navegacion ul li{
+  border-style: solid;
+  padding: 16px 8px;
 }
 
 nav li {
@@ -34,10 +34,33 @@ nav li {
   margin-right: 16px;
 }
 
-.carrusel{
+.carrusel ul {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.carrusel ul li{
+
   text-decoration: none;
+}
+
+.form{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formularioLogin .formularioRegister{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .pie {
@@ -46,4 +69,5 @@ nav li {
  padding:8px;
  margin-top: 124px;
  border-style: solid;
+ border-radius: 0 0 24px 24px;
 }

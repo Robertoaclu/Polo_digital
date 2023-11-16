@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Polo Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pixelify+Sans&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
+
 <body>
-    
+    <header>
+        <div class="cabecera">
+            <h1><b>API</b> Polo Digital</h1>
+        </div>
+
+        <div id="menu" class="navegacion">
+            <nav>
+                <ul>
+                    <li>Clientes</li>
+                    <li>Mobiliario</li>
+                    <li>Inventario</li>
+                    <li>Eventos</li>
+                    <li>Registro</li>
+                </ul>
+                <ul>
+                    <li><a href="html/login.html">Login/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form">
+        <div class="formularioLogin">
+            <h2>Login</h2>
+            <div class="formBox">
+                <div>
+                    <label>Email <input type="email" name="Email" id="email" /></label>
+                </div>
+                <div>
+                    <label>Password <input type="password" name="Password" id="password" /></label>
+                </div>
+            </div>
+            <div>
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <div class="formularioRegister">
+            <h2>Register</h2>
+            <div class="formBox">
+                <div>
+                    <label>Email <input type="email" name="Email" id="email" /></label>
+                </div>
+                <div>
+                    <label>Password <input type="password" name="Password" id="password" /></label>
+                </div>
+                <div>
+                    <label> Repit Password <input type="password" name="Password" id="password" /></label>
+                </div>
+            </div>
+            <div>
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div id="pie" class="pie">Desarrollado por Roberto Acevedo Lucena</div>
+    </footer>
+
+    <script src="/js/login.js"></script>
 </body>
+
 </html>
