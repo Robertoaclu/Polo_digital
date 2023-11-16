@@ -1,3 +1,7 @@
+// NODE:JS + EXPRESS
+
+
+
 const express = require("express");
 const app = express();
 const mysql = require("mysql2");
@@ -229,7 +233,7 @@ app.post(`/clientes/:id`, function (request, response) {
 app.get(`/clientes/:id`, function (request, response) {
     connection.query(`SELECT * FROM clientes where id= ${request.params.id}`, function(error, result, fields){
         handleSQLError(response, error, result, function(result){
-            response.send(result);
+            response.send(result[0]);
         });
         
     });
