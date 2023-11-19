@@ -1,0 +1,17 @@
+.form{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .formularioLogin .formularioRegister{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }

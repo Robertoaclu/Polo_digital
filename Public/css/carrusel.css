@@ -1,0 +1,10 @@
+.carrusel ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .carrusel ul li{
+  
+    text-decoration: none;
+  }
