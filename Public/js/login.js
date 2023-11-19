@@ -38,7 +38,13 @@ function register() {
     fetch(`${host}/login-register`, {
         method:"POST", 
         headers: {"Content-Type": "application/json"}, 
-        body: JSON.stringify({email: email, password:password, nombre: nombre, apellido: apellido, dni: dni, cliente: cliente, telefono: telefono})
+        body: JSON.stringify({email: email, 
+          password:password, 
+          nombre: nombre, 
+          apellido: apellido, 
+          dni: dni, 
+          cliente: cliente, 
+          telefono: telefono})
       })
       .then(function(response){
         return response.json();

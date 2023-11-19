@@ -20,7 +20,7 @@ function mostrarClientes() {
             <p>Sector: ${json[i].sector}</p>
             <p>Telefono: ${json[i].telefono}</p>
             <p>Numero de empleados: ${json[i].numero_empleados}</p>
-            <button onClick="mostrarForm(${json[i].id})">Editar</button>
+            <button class="boton" onClick="mostrarForm(${json[i].id})">Editar</button>
             </div>`;
             }
             clientesDiv.innerHTML = innerHTML;
@@ -41,7 +41,7 @@ function mostrarForm(clienteID) {
         .then(function (json) {
             let clientesDiv = document.getElementById("editCliente");
 
-            innerHTML = `<div>
+            innerHTML = `<div class="form">
         <h2>Editar cliente</h2>
             <div class="formBox">
                 <div>
@@ -61,7 +61,7 @@ function mostrarForm(clienteID) {
                 </div>
             </div>
             <div>
-                <button onClick="modificarCliente(${clienteID})">Guardar</button>
+                <button class="boton" onClick="modificarCliente(${clienteID})">Guardar</button>
             </div>`;
 
             clientesDiv.innerHTML = innerHTML;
@@ -117,8 +117,8 @@ function formCliente() {
         .then(function (json) {
             let clientesDiv = document.getElementById("nuevoCliente");
 
-            innerHTML = `<div>
-        <h2>Editar cliente</h2>
+            innerHTML = `<div class="form">
+        <h2>Nuevo cliente</h2>
             <div class="formBox">
                 <div>
                     <label>Razon Social: <input type="razonSocial" name="razonSocial" id="razonSocial" /></label>
@@ -137,7 +137,7 @@ function formCliente() {
                 </div>
             </div>
             <div>
-                <button onClick="nuevoCliente()">Guardar</button>
+                <button class="boton" onClick="nuevoCliente()">Guardar</button>
             </div>`;
 
             clientesDiv.innerHTML = innerHTML;

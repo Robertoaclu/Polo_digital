@@ -24,3 +24,17 @@ body {
  border-style: solid;
  border-radius: 0 0 24px 24px;
 }
+
+.boton {
+  padding:10px 15px;
+  margin:15px;
+  border-style: solid;
+  border-color: rgb(17, 189, 74);
+  display: inline-block;
+  background-color: black;
+  color: rgb(17, 189, 74);
+}
+.boton a{
+  text-decoration: none;
+  color:rgb(17, 189, 74);
+}

@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pixelify+Sans&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css.formularios.css">
 </head>
 
 <body>
@@ -21,18 +23,12 @@
         </div>
 
         <div id="menu" class="navegacion">
-            <nav>
-                <ul>
-                    <li>Clientes</li>
-                    <li>Mobiliario</li>
-                    <li>Inventario</li>
-                    <li>Eventos</li>
-                    <li>Registro</li>
-                </ul>
-                <ul>
-                    <li><a href="html/login-register.html">Login/Register</a></li>
-                </ul>
-            </nav>
+            <div>
+              <a href="/html/clientes.html">Clientes</a>
+              <a href="/html/mobiliario.html">Mobiliario</a>
+              <a href="/html/inventario.html">Inventario</a>
+              <a href="hmtl/eventos.html">Eventos</a>
+            </div>
         </div>
     </header>
 
@@ -48,7 +44,7 @@
                 </div>
             </div>
             <div>
-                <button onclick="login()">Login</button>
+                <button class="boton" onclick="login()">Login</button>
             </div>
         </div>
 
@@ -81,23 +77,23 @@
                 </div>
             </div>
             <div>
-                <button onclick="login()">Register</button>
+                <button class="boton" onclick="login()">Register</button>
             </div>
         </div>
     </div>
 
-    <section>
-        <input type="submit" value="Volver" href="/index.html">
+    <div class="boton">
         <a href="/index.html">Volver</a>
-    </section>
+    </div>
 
 
 
     <footer>
-        <div id="pie" class="pie">Desarrollado por Roberto Acevedo Lucena</div>
+        <div id="pie" class="pie">Desarrollado por Roberto A.L</div>
     </footer>
 
     <script src="/js/login.js"></script>
+    
 </body>
 
 </html>
