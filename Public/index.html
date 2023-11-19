@@ -6,10 +6,16 @@
     <title>Polo Digital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/carrusel.css">
+    <link rel="stylesheet" href="css/formularios.css">
   </head>
   <body>
     <header>
@@ -18,19 +24,15 @@
       </div>
 
       <div id="menu" class="navegacion">
-        <nav>
-          <ul>
-            <li>Clientes</li>
-            <li>Mobiliario</li>
-            <li>Inventario</li>
-            <li>Eventos</li>
-            <li>Registro</li>
-          </ul>
-          <ul>
-            <li><a href="html/login-register.html">Login</a></li>
-            <li><a href="html/login-register.html">Register</a></li>
-          </ul>
-        </nav>
+        <div>
+          <a href="/html/clientes.html">Clientes</a>
+          <a href="/html/mobiliario.html">Mobiliario</a>
+          <a href="/html/inventario.html">Inventario</a>
+          <a href="hmtl/eventos.html">Eventos</a>
+        </div>
+        <div>
+          <a href="html/login-register.html">Login</a>
+        </div>
       </div>
     </header>
 
@@ -39,8 +41,6 @@
         <ul>
           <li>Polloween</li>
           <li>Navidad</li>
-        </ul>
-        <ul>
           <li>Hiringday</li>
           <li>Mercapolo</li>
         </ul>
@@ -48,9 +48,7 @@
     </main>
 
     <footer>
-      <div id="pie" class="pie">
-        Desarrollado por Roberto Acevedo Lucena
-      </div>
+      <div id="pie" class="pie">Desarrollado por Roberto Acevedo Lucena</div>
     </footer>
 
     <script src="/js/index.js"></script>

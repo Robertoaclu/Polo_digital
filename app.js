@@ -203,7 +203,7 @@ app.post(`/clientes`, function (request, response) {
         if (error) {
             return console.error(`error: ${error.message}`);
         }
-        response.send(result);
+        response.send({message: `Client added`});
     });
     console.log("Insertar nuevo cliente en base de datos.");    
 });
@@ -221,7 +221,7 @@ app.post(`/clientes/:id`, function (request, response) {
         if (error) {
             return console.error(`error: ${error.message}`);
         }
-        response.send(result);
+        response.send({message: `Client modified`});
 
     });
     console.log("update cliente en base de datos");
