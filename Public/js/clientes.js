@@ -20,6 +20,7 @@ function mostrarClientes() {
             <p>Sector: ${json[i].sector}</p>
             <p>Telefono: ${json[i].telefono}</p>
             <p>Numero de empleados: ${json[i].numero_empleados}</p>
+            
             <button class="boton" onClick="mostrarForm(${json[i].id})">Editar</button>
             </div>`;
             }

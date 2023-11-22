@@ -9,33 +9,33 @@ function mostrarEventos() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (json) {
-      const carruselDiv = document.getElementById("carrusel");
-      let innerHTML = `<ul>`;
-
-      for (i = 0; i < json.length; i++) {
-        innerHTML += `<li>${json[i].nombre} -
-        ${json[i].sala} -
-        ${json[i].fecha_inicio} -
-        ${json[i].fecha_final}
-        <button class= "boton" onClick="carruselClick(${json[i].id})">Saber más</button></li>`;
-      }
-      innerHTML += `</ul>`;
-
-      carruselDiv.innerHTML=innerHTML;
     // .then(function (json) {
     //   const carruselDiv = document.getElementById("carrusel");
-    //   let innerHTML = "<div>";
+    //   let innerHTML = `<ul>`;
 
     //   for (i = 0; i < json.length; i++) {
-    //     innerHTML += `<h2>${json[i].nombre} - </h2>
-    //     <p>${json[i].sala} -</p> 
-    //     <p>${json[i].fecha_inicio} -</p> 
-    //     <p>${json[i].fecha_fin}</p>
-    //     <button onClick="carruselClick(${json[i].id})">Saber más</button>`;
+    //     innerHTML += `<li>${json[i].nombre} -
+    //     ${json[i].sala} -
+    //     ${json[i].fecha_inicio} -
+    //     ${json[i].fecha_final}
+    //     <button class= "boton" onClick="carruselClick(${json[i].id})">Saber más</button></li>`;
     //   }
-    //   innerHMTL += "</div>";
-    //   carruselDiv.innerHTML = innerHTML;
+    //   innerHTML += `</ul>`;
+
+    //   carruselDiv.innerHTML=innerHTML;
+    .then(function (json) {
+      const carruselDiv = document.getElementById("carrusel");
+      let innerHTML = "<div>";
+
+      for (i = 0; i < json.length; i++) {
+        innerHTML += `<h2>${json[i].nombre} - </h2>
+        <p>${json[i].sala} -</p> 
+        <p>${json[i].fecha_inicio} -</p> 
+        <p>${json[i].fecha_fin}</p>
+        <button class="boton" onClick="carruselClick(${json[i].id})">Saber más</button>`;
+      }
+      innerHTML += "</div>";
+      carruselDiv.innerHTML = innerHTML;
     })
     .catch(function (error) {
       console.log(error);
