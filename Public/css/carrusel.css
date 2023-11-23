@@ -1,10 +1,17 @@
-.carrusel ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  .carrusel ul li{
-  
-    text-decoration: none;
-  }
+#carrusel {
+  display:flex;
+  justify-content: space-evenly;
+
+  border: 3px;
+  border-color: white;
+  border-style: solid;
+}
+
+
+.carru {
+  display:flex;
+  /*justify-content: space-evenly;*/
+  border: 3px;
+  border-color: white;
+  border-style: solid;
+}
