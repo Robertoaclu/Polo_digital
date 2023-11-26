@@ -16,6 +16,11 @@ body {
   margin:0px 0px 32px 0px;
 }
 
+.titulo{
+  display: flex;
+  justify-content: center;
+}
+
 .pie {
  display: flex;
  justify-content: center;

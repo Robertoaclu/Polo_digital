@@ -23,12 +23,16 @@ function mostrarEventos() {
     //   innerHTML += `</ul>`;
 
     //   carruselDiv.innerHTML=innerHTML;
+
+    
     .then(function (json) {
       const carruselDiv = document.getElementById("carrusel");
+      
       let innerHTML = "<div>";
 
       for (i = 0; i < json.length; i++) {
-        innerHTML += `<h2>${json[i].nombre} - </h2>
+        innerHTML += `<div>
+        <h2>${json[i].nombre} - </h2>
         <p>${json[i].sala} -</p> 
         <p>${json[i].fecha_inicio} -</p> 
         <p>${json[i].fecha_fin}</p>

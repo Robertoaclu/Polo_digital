@@ -178,7 +178,7 @@ app.post(`/registro`, function (request, response) {
 // --------------------------------------------------------------------------
 
 
-// Endpoints para clientes
+// Endpoints para CLIENTES
 
 app.get(`/clientes`, function (request, response) {
     connection.query(`SELECT * FROM clientes`, function (error, result, fields) {
@@ -240,9 +240,134 @@ app.get(`/clientes/:id`, function (request, response) {
     console.log("Obtiene los datos del cliente con el id en :id");
 });
 
+// Terminan los endpoints de CLIENTES
+// --------------------------------------------------------------------------
+// Endpoints de MOBILIARIO
+
+app.get(`/mobiliario`, function (request, response) {
+    connection.query(`SELECT * FROM mobiliario`, function (error, result, fields) {
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send(result);
+    });
+    console.log("Listado de mobiliario en base de datos.");
+});
+
+app.post(`/mobiliario`, function (request, response) {
+    let nombre = request.body.nombre;
+    console.log(nombre);
+    let tipo = request.body.tipo;
+    let referencia = request.body.referencia;
+    let estado = request.body.estado;
+    console.log(estado);
+    let salaId = request.body.salaId;
+
+    connection.query(`INSERT INTO mobiliario (nombre, tipo, referencia, estado, salaId) 
+    VALUES ("${nombre}","${tipo}", "${referencia}", "${estado}", "${salaId}")`, 
+    function (error, result, fields){
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send({message: `Forniture added`});
+    });
+    console.log("Insertar nuevo mobiliario en base de datos.");    
+});
+
+app.post(`/mobiliario/:id`, function (request, response) {
+    let nombre = request.body.nombre;
+    let tipo = request.body.tipo;
+    let referencia = request.body.referencia;
+    let estado = request.body.estado;
+    let salaId = request.body.salaId;
+
+    connection.query(`UPDATE mobiliario SET nombre = "${nombre}", tipo = "${tipo}", referencia = "${referencia}", 
+    estado = "${estado}", salaId = "${salaId}" WHERE id = ${request.params.id}`,
+    function (error, result, fields){
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send({message: `Forniture modified`});
+
+    });
+    console.log("update mobiliario en base de datos");
+});
+
+app.get(`/mobiliario/:id`, function (request, response) {
+    connection.query(`SELECT * FROM mobiliario where id= ${request.params.id}`, function(error, result, fields){
+        handleSQLError(response, error, result, function(result){
+            response.send(result[0]);
+        });
+        
+    });
+    console.log("Obtiene los datos del mobiliario con el id en :id");
+});
+
+//Terminan los endpoints de MOBILIARIO
+// --------------------------------------------------------------------------
+// Endpoints de INVENTARIO
+
+app.get(`/inventario`, function (request, response) {
+    connection.query(`SELECT * FROM inventario`, function (error, result, fields) {
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send(result);
+    });
+    console.log("Listado de inventario en base de datos.");
+});
+
+app.post(`/inventario`, function (request, response) {
+    let nombre = request.body.nombre;
+    let tipo = request.body.tipo;
+    let referencia = request.body.referencia;
+    let estado = request.body.estado;
+    let marca = request.body.marca;
+    let clienteId = request.body.clienteId;
+
+    connection.query(`INSERT INTO inventario (nombre, tipo, referencia, estado, marca, clienteId) 
+    VALUES ("${nombre}","${tipo}", "${referencia}", "${estado}", "${marca}", "${clienteId}")`, 
+    function (error, result, fields){
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send({message: `Inventory added`});
+    });
+    console.log("Insertar nuevo inventario en base de datos.");    
+});
+
+app.post(`/inventario/:id`, function (request, response) {
+    let nombre = request.body.nombre;
+    let tipo = request.body.tipo;
+    let referencia = request.body.referencia;
+    let estado = request.body.estado;
+    let marca = request.body.marca;
+    let clienteId = request.body.clienteId;
+
+    connection.query(`UPDATE inventario SET nombre = "${nombre}", tipo = "${tipo}", referencia = "${referencia}", 
+    estado = "${estado}", marca = "${marca}", clienteId = "${clienteId}" WHERE id = ${request.params.id}`,
+    function (error, result, fields){
+        if (error) {
+            return console.error(`error: ${error.message}`);
+        }
+        response.send({message: `Inventory modified`});
+
+    });
+    console.log("update inventario en base de datos");
+});
+
+app.get(`/inventario/:id`, function (request, response) {
+    connection.query(`SELECT * FROM inventario where id= ${request.params.id}`, function(error, result, fields){
+        handleSQLError(response, error, result, function(result){
+            response.send(result[0]);
+        });
+        
+    });
+    console.log("Obtiene los datos del inventario con el id en :id");
+});
 
 
-
+// Terminan los endpoints de INVENTARIO
 // --------------------------------------------------------------------------
 // Especificamos el puerto por el que se comunica el punto de salida
 

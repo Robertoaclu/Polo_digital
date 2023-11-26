@@ -1,8 +1,8 @@
 const host = "http://localhost:8000";
 
-window.addEventListener("load", mostrarClientes);
-
-//Scrip para mostrar la lista de clientes GET
+window.addEventListener("load", mostrarClientes());
+// --------------------------------------------------------------------------
+//Script para mostrar la lista de clientes (GET)
 
 function mostrarClientes() {
     let innerHTML = "";
@@ -15,14 +15,14 @@ function mostrarClientes() {
 
             for (i = 0; i < json.length; i++) {
                 innerHTML += `<div>
-            <h2>${json[i].razon_social}</h3>
-            <p>CIF: ${json[i].cif}</p>
-            <p>Sector: ${json[i].sector}</p>
-            <p>Telefono: ${json[i].telefono}</p>
-            <p>Numero de empleados: ${json[i].numero_empleados}</p>
-            
-            <button class="boton" onClick="mostrarForm(${json[i].id})">Editar</button>
-            </div>`;
+                <h2>${json[i].razon_social}</h3>
+                <p>CIF: ${json[i].cif}</p>
+                <p>Sector: ${json[i].sector}</p>
+                <p>Telefono: ${json[i].telefono}</p>
+                <p>Numero de empleados: ${json[i].numero_empleados}</p>
+                
+                <button class="boton" onClick="mostrarForm(${json[i].id})">Editar</button>
+                </div>`;
             }
             clientesDiv.innerHTML = innerHTML;
         }).catch(function (error) {
@@ -30,8 +30,8 @@ function mostrarClientes() {
         });
 }
 
-
-// Scrip para mostrar el formulario donde editaremos GET
+// --------------------------------------------------------------------------
+// Script para mostrar el formulario donde editaremos el cliente seleccionado (GET)
 
 function mostrarForm(clienteID) {
     let innerHTML = "";
@@ -77,8 +77,8 @@ function mostrarForm(clienteID) {
         });
 }
 
-
-// Scrip para editar el cliente seleccionado POST
+// --------------------------------------------------------------------------
+// Script para editar el cliente seleccionado (POST)
 
 function modificarCliente(clienteID) {
     const razon_social = document.getElementById(`razonSocial`).value;
@@ -106,8 +106,8 @@ function modificarCliente(clienteID) {
         })
 
 }
-
-// Scrip para mostrar el formulario de nuevo cliente GET
+// --------------------------------------------------------------------------
+// Script para mostrar el formulario de nuevo cliente GET
 
 function formCliente() {
     let innerHTML = "";
@@ -148,7 +148,8 @@ function formCliente() {
         });
 }
 
-// Scrip para añadir un cliente nuevo POST
+// --------------------------------------------------------------------------
+// Script para añadir un cliente nuevo (POST)
 
 function nuevoCliente(){
     const razon_social = document.getElementById(`razonSocial`).value;
@@ -159,7 +160,7 @@ function nuevoCliente(){
     if(razon_social&&cif&&sector&&telefono&&numero_empleados){
         fetch (`${host}/clientes`, {
             method: "POST",
-            headers: {"Content-Type": "applcation/jason"},
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ razon_social: razon_social, cif: cif, sector: sector, telefono: telefono, numero_empleados: numero_empleados })
         })
         .then(function(response){
