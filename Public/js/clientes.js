@@ -1,6 +1,7 @@
 const host = "http://localhost:8000";
 
 window.addEventListener("load", mostrarClientes());
+
 // --------------------------------------------------------------------------
 //Script para mostrar la lista de clientes (GET)
 

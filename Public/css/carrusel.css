@@ -1,17 +1,8 @@
-#carrusel {
+.carrusel {
   display:flex;
   justify-content: space-evenly;
-
-  border: 3px;
-  border-color: white;
+  border: 2px;
+  border-color: rgb(17, 189, 74);
   border-style: solid;
-}
-
-
-.carru {
-  display:flex;
-  /*justify-content: space-evenly;*/
-  border: 3px;
-  border-color: white;
-  border-style: solid;
+  padding: 24px;
 }

@@ -1,10 +1,13 @@
 const host = "http://localhost:8000";
 
-window.addEventListener("load", mostrarEventos);
+window.addEventListener("load", mostrarEventos());
 
+// --------------------------------------------------------------------------
 // Scrip para mostrar la lista de eventos
 
 function mostrarEventos() {
+  let innerHTML= "";
+
   fetch(`${host}/carrusel?total=4`)
     .then(function (response) {
       return response.json();
@@ -26,27 +29,27 @@ function mostrarEventos() {
 
     
     .then(function (json) {
-      const carruselDiv = document.getElementById("carrusel");
-      
-      let innerHTML = "<div>";
+      let carruselDiv = document.getElementById("carrusel");
 
       for (i = 0; i < json.length; i++) {
         innerHTML += `<div>
-        <h2>${json[i].nombre} - </h2>
-        <p>${json[i].sala} -</p> 
-        <p>${json[i].fecha_inicio} -</p> 
-        <p>${json[i].fecha_fin}</p>
-        <button class="boton" onClick="carruselClick(${json[i].id})">Saber más</button>`;
+        <h2>${json[i].nombre}</h2>
+        <p>Sala: ${json[i].sala}</p> 
+        <p>Fecha de inicio: ${json[i].fecha_inicio}</p> 
+        <p>Fecha de finalizacion: ${json[i].fecha_final}</p>
+
+        <button class="boton" onClick="carruselClick(${json[i].id})">Saber más</button>
+        </div>`;
       }
-      innerHTML += "</div>";
+      
       carruselDiv.innerHTML = innerHTML;
     })
     .catch(function (error) {
       console.log(error);
     });
-  
 }
 
+// --------------------------------------------------------------------------
 // Script para mostrar el evento seleccionado
 
 function carruselClick(eventoId) {
@@ -63,8 +66,6 @@ function carruselClick(eventoId) {
     <p>Finaliza el ${json.fecha_fin}</p>
     <p>Aforo ${json.aforo}</p>
     </div>
-    
-    
     <button onClick="mostrarEventos()">Volver</button>`;
 
       carruselDiv.innerHTML = eventoHTML;

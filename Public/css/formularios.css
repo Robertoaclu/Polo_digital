@@ -1,14 +1,18 @@
-.form{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .formularioLogin .formularioRegister{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px;
+  border-color: rgb(17, 189, 74);
+  border-style: solid;
+  padding: 24px;
+}
 
-  .formBox{
-    flex-direction: column;
-  }
+.formularioLogin .formularioRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBox {
+  flex-direction: column;
+}
