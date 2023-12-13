@@ -19,7 +19,7 @@ function mostrarClientes() {
                 <h2>${json[i].razon_social}</h3>
                 <p>CIF: ${json[i].cif}</p>
                 <p>Sector: ${json[i].sector}</p>
-                <p>Telefono: ${json[i].telefono}</p>
+                <p>Teléfono: ${json[i].telefono}</p>
                 <p>Numero de empleados: ${json[i].numero_empleados}</p>
                 
                 <button class="boton" onClick="mostrarForm(${json[i].id})">Editar</button>
@@ -47,7 +47,7 @@ function mostrarForm(clienteID) {
         <h2>Editar cliente</h2>
             <div class="formBox">
                 <div>
-                    <label>Razon Social: <input type="razonSocial" name="razonSocial" id="razonSocial" /></label>
+                    <label>Razón Social: <input type="razonSocial" name="razonSocial" id="razonSocial" /></label>
                 </div>
                 <div>
                     <label>CIF: <input type="cif" name="cif" id="cif" /></label>
@@ -56,7 +56,7 @@ function mostrarForm(clienteID) {
                     <label>Sector: <input type="sector" name="sector" id="sector" /></label>
                 </div>
                 <div>
-                    <label>Telefono: <input type="telefono" name="telefono" id="telefono" /></label>
+                    <label>Teléfono: <input type="telefono" name="telefono" id="telefono" /></label>
                 </div>
                 <div>
                     <label>Numero de empleados: <input type="numEmpleados" name="numEmpleados" id="numEmpleados" /></label>
@@ -123,7 +123,7 @@ function formCliente() {
         <h2>Nuevo cliente</h2>
             <div class="formBox">
                 <div>
-                    <label>Razon Social: <input type="razonSocial" name="razonSocial" id="razonSocial" /></label>
+                    <label>Razón Social: <input type="razonSocial" name="razonSocial" id="razonSocial" /></label>
                 </div>
                 <div>
                     <label>CIF: <input type="cif" name="cif" id="cif" /></label>
@@ -132,7 +132,7 @@ function formCliente() {
                     <label>Sector: <input type="sector" name="sector" id="sector" /></label>
                 </div>
                 <div>
-                    <label>Telefono: <input type="telefono" name="telefono" id="telefono" /></label>
+                    <label>Teléfono: <input type="telefono" name="telefono" id="telefono" /></label>
                 </div>
                 <div>
                     <label>Numero de empleados: <input type="numEmpleados" name="numEmpleados" id="numEmpleados" /></label>

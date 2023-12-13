@@ -44,7 +44,7 @@ function mostrarForm(inventarioID) {
         .then(function (json) {
             let inventarioDiv = document.getElementById("editInventario");
 
-            innerHTML = `<div class="form">
+            innerHTML =/*html*/`<div class="form">
         <h2>Editar inventario</h2>
             <div class="formBox">
                 <div>
